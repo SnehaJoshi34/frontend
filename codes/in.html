@@ -1,0 +1,98 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdn.tutorialjinni.com/intl-tel-input/17.0.8/css/intlTelInput.css"/>
+    <script src="https://cdn.tutorialjinni.com/intl-tel-input/17.0.8/js/intlTelInput.min.js"></script>
+ 
+</head>
+<body>
+    <div class="container">
+        <form id="contact" action="" method="post">
+            <h1>Application Form</h1>
+            <h3>Fill the form below and press the submit button!</h3>
+            <div class="row">
+                <!-- first column -->
+                <div class="column">                        
+                    <fieldset>
+                        <input type="text" placeholder="Full Name *" name="name" required autofocus>
+                    </fieldset>
+                    <fieldset>
+                        <input type="text" placeholder="Product type *" name="fname" required autofocus>
+                    </fieldset>
+                    <fieldset>
+                        <input type="email" placeholder="Your email *" name="email" required autofocus>
+                    </fieldset>
+                    <fieldset>
+                        <input type="text" placeholder="expiry date *" name="date" onfocus="(this.type = 'date')" required autofocus>
+                    </fieldset>
+                    <fieldset>
+                        <input type="text" placeholder="Pricing *" name="price"  required autofocus>
+                    </fieldset>
+                    <fieldset>
+                        <input type="text" placeholder="city*" name="date"  required autofocus>
+                    </fieldset>
+                    <fieldset>
+                        <input type="text" placeholder="Address*" name="date"  required autofocus>
+                    </fieldset>
+                    <fieldset>
+                        <label>
+                            ZIP Code
+                            <input type="text" name="ZIP">
+                          </label>
+                    </fieldset>
+                    <!-- adding all country code list -->
+                    <fieldset>
+                        <input type="text" placeholder="Phone number *" name="phone" id="phone" required autofocus>
+                   
+                </div>
+                <!-- second column -->
+                <div class="column">
+                    <fieldset>
+                        <p>options </p>
+                        <div class="radio">
+                            <input type="radio" id="male" name="gender" required>
+                            <label for="male">Rent</label>
+                        </div>
+                        <div class="radio">
+                            <input type="radio" id="female" name="gender" required>
+                            <label for="female">Resell</label>
+                        </div>
+                        <div class="radio">
+                            <input type="radio" id="female" name="gender" required>
+                            <label for="female">Resell and Rent</label>
+                        </div>
+                    </fieldset>
+                      <p> Possible file types: DOC, PDF. Maximum file size: 10 MB.</p><br><br>
+                    <fieldset>
+                        <p>Upload image of product</p>
+                        <input type="file" id="file" required>
+                    </fieldset>
+                    <fieldset>
+                        <p>Upload Authentication letter of ownership</p>
+                        <input type="file" id="file" required>
+                    </fieldset>
+                </div>
+            </div>
+            <!-- submit button -->
+            <fieldset>
+                <button type="submit" id="button">Submit Now</button>
+            </fieldset>
+        </form>
+    </div>
+ 
+ 
+    <!-- Javascript to initialize the code list -->
+    <script>
+    var input = document.querySelector("#phone");
+    window.intlTelInput(input, {
+     separateDialCode: true
+     });
+  </script>
+</body>
+</html>
